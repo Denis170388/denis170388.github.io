@@ -1,0 +1,38 @@
+body {
+    background-color: #f8f9fa;
+}
+
+/* Wadah baru untuk layout flexbox */
+.page-body {
+    display: flex;
+}
+
+/* Gaya baru untuk Sidebar */
+.sidebar {
+    width: 250px; /* Lebar sidebar */
+    flex-shrink: 0; /* Mencegah sidebar menyusut */
+    background-color: #343a40;
+    padding: 15px;
+    height: calc(100vh - 56px); /* Tinggi viewport dikurangi tinggi header */
+    position: sticky; /* Membuat sidebar menempel saat scroll */
+    top: 56px; /* Jarak dari atas, sesuaikan dengan tinggi header Anda */
+}
+
+.sidebar a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    color: #fff;
+    background-color: #495057;
+}
+
+/* Gaya baru untuk Konten Utama */
+.main-content {
+    flex-grow: 1; /* Membuat konten utama mengisi sisa ruang */
+    padding: 20px;
+}
